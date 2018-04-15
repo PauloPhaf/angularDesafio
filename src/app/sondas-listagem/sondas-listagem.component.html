@@ -1,0 +1,21 @@
+<h2>Entrada</h2>
+
+<input type="text" size="2" maxlength="3" placeholder="x y" [(ngModel)]="planalto">
+<br /> 
+<input type="text" size="2" maxlength="5" placeholder="x y d" [(ngModel)]="sonda1">
+<br /> 
+<input type="text" maxlength="15"  placeholder="Comandos 1" [(ngModel)]="controle1">
+<br /> 
+<input type="text" size="2" maxlength="5" placeholder="x y d" [(ngModel)]="sonda2">
+<br /> 
+<input type="text" maxlength="15" placeholder="Comandos 2" [(ngModel)]="controle2">
+
+<br /> 
+<button (click)="SendData()">Enviar Dados</button>
+
+<h2>Saída</h2>
+<ul>
+  <li *ngFor="let s of sondas">
+      {{s.sonda}}
+  </li>
+</ul> 
